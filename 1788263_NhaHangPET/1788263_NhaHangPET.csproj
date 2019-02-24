@@ -107,6 +107,8 @@
     <Content Include="DuLieu\MatHang\MON_AN_8.json" />
     <Content Include="DuLieu\MatHang\MON_AN_9.json" />
     <Content Include="1_GiaoDien\MH_KhachThamQuan.cshtml" />
+    <Content Include="DuLieu\NhomHang\CA_PHE.json" />
+    <Content Include="DuLieu\NhomHang\MON_AN.json" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -154,7 +156,7 @@
     <Content Include="Media\KHACH_HANG_1.png" />
     <Content Include="Media\KHACH_HANG_2.png" />
     <Content Include="Media\Khach_hang_3.png" />
-    <Content Include="Media\Khach_Tham_quan.png" />
+    <Content Include="Media\Khach_Tham_Quan.png" />
     <Content Include="Media\Khach_Tham_quan_0.png" />
     <Content Include="Media\Khach_tham_quan_1.png" />
     <Content Include="Media\Khach_tham_quan_2.png" />
@@ -191,9 +193,7 @@
     <Content Include="Media\MON_AN_8.png" />
     <Content Include="Media\MON_AN_9.jpg" />
     <Content Include="Media\MON_AN_9.png" />
-    <Content Include="Media\NHOM_HANG_1.png" />
     <Content Include="Media\NHOM_HANG_2.png" />
-    <Content Include="Media\NHOM_HANG_3.png" />
     <Content Include="Media\NHOM_HANG_4.png" />
     <Content Include="Media\NH_1.png" />
     <Content Include="Media\NH_2.png" />
@@ -249,11 +249,12 @@
   <ItemGroup>
     <Compile Include="2_XuLy\MoHinhDoiTuong.cs" />
     <Compile Include="2_XuLy\XL_LuuTru.cs" />
+    <Compile Include="2_XuLy\XL_NghiepVu.cs" />
+    <Compile Include="2_XuLy\XL_TheHien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DuLieu\NhanVien\" />
-    <Folder Include="DuLieu\NhomHang\" />
     <Folder Include="DuLieu\QuanLy\" />
   </ItemGroup>
   <PropertyGroup>

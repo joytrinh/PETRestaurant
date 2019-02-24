@@ -1,13 +1,15 @@
 ﻿@{ 
-    var DanhSachNhomHang;
-    var DanhSachMatHang;
+    var DanhSachNhomHang = XL_LuuTru.DocDanhSachNhomHang();
+    var DanhSachMatHang = XL_LuuTru.DocDanhSachMatHang();
     var KhachThamQuan = new XL_KhachThamQuan(); // Bien (ket qua)
 
     //Xu ly the hien: Tao chuoi HTML
-    var ChuoiHTML_KhachThamQuan;
-    var ChuoiHTML_ThongBao;
-    var ChuoiHTML_DanhSachNhomHang;
-    var ChuoiHTML_DanhSachMatHang;
+    var ChuoiHTML_KhachThamQuan = XL_TheHien.TaoChuoiHTMLChaoKhachThamQuan(KhachThamQuan);
+
+    var ChuoiHTML_ThongBao = "<br/> Chúng tôi hiện có " + DanhSachNhomHang.Count + " Nhóm hàng với " + DanhSachMatHang.Count + " Mặt hàng";
+
+    var ChuoiHTML_DanhSachNhomHang = XL_TheHien.TaoChuoiHTMLDanhSachNhomHang(DanhSachNhomHang, DanhSachMatHang);
+    var ChuoiHTML_DanhSachMatHang = XL_TheHien.TaoChuoiHTMLDanhSachMatHang(DanhSachMatHang);
 }
 <!DOCTYPE html>
 <html>
@@ -19,7 +21,10 @@
 </head>
 <body style="font-family:Arial;">
     <div class="container-fluid">
-
+        @Html.Raw(ChuoiHTML_KhachThamQuan)
+        @Html.Raw(ChuoiHTML_ThongBao)
+        @Html.Raw(ChuoiHTML_DanhSachNhomHang)
+        @Html.Raw(ChuoiHTML_DanhSachMatHang)
     </div>
 </body>
 </html>
